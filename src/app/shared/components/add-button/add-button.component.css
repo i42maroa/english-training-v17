@@ -1,4 +1,4 @@
-.float_button{
+/* .float_button{
   border-radius: 100px;
   width: 4rem;
   height: 4rem;
@@ -19,4 +19,4 @@
   transform:scale(1.1);
   background: linear-gradient(to bottom right,var(--main-color),var(--main-color));
   transition: 0.4s;
-}
+} */

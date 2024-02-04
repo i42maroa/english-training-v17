@@ -1,5 +1,7 @@
 <p>List words</p>
 
-@for (word of words; track word._id) {
+@for (word of words$ | async; track word._id) {
   <p [routerLink]="'/detail/'+ word._id">{{word.name}}</p>
 }
+
+<app-add-button></app-add-button>
