@@ -1,0 +1,26 @@
+
+<div>
+  <h2>{{word.name }}</h2>
+  <p>/{{word.pronuntation}}/</p>
+
+  <div class="definition_container">
+    @for (definition of word.definition; track $index) {
+        <p>{{definition.type}}</p>
+        <p>{{definition.translation}}</p>
+        @if (definition.explanation) {
+          <p>{{definition.explanation}}</p>
+        }
+        @if (definition.examples.length > 0) {
+        <div>
+          <p>Examples</p>
+          @for (example of definition.examples; track $index) {
+            <p>{{example.phrase}}</p>
+            @if (example.explanation) {
+              <p>{{example.explanation}}</p>
+            }
+          }
+        </div>
+        }
+    }
+  </div>
+</div>

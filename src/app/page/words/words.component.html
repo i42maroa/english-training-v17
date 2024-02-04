@@ -1,0 +1,5 @@
+<p>List words</p>
+
+@for (word of words; track word._id) {
+  <p [routerLink]="'/detail/'+ word._id">{{word.name}}</p>
+}
