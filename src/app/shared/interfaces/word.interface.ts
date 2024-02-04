@@ -17,6 +17,7 @@ export interface WordInterface {
   name:string;
   pronuntation?: string;
   date:Date;
+  lastModificationDate:Date;
   definition: WordDefinition[];
 }
 
@@ -27,6 +28,7 @@ export const WORDS_TEST:WordInterface[]=[
     name:'car',
     pronuntation:'\'ka:',
     date:new Date(),
+    lastModificationDate:new Date(),
     definition:[
       {
         type:'noun',

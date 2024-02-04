@@ -8,7 +8,7 @@ export const selectAddButton = createSelector(
   (state:InterfaceState) => state.showAddButton
 )
 
-export const selectModalButton = createSelector(
+export const selectModal = createSelector(
   selectWordsFeature,
   (state:InterfaceState) => state.modal
 )
@@ -21,4 +21,9 @@ export const selectShowModal = createSelector(
 export const selectTypeModal = createSelector(
   selectWordsFeature,
   (state:InterfaceState) => state.modal.type
+)
+
+export const selectPrechargedModalWord = createSelector(
+  selectWordsFeature,
+  (state:InterfaceState) => state.modal.wordPrecharged
 )

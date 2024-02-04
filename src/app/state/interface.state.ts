@@ -1,4 +1,4 @@
-import { WordInterface } from "../shared/interfaces/word.interface";
+import { WORDS_TEST, WordInterface } from "../shared/interfaces/word.interface";
 
 export interface InterfaceState{
   showAddButton:boolean,
@@ -8,7 +8,9 @@ export interface InterfaceState{
 export interface ModalState{
   show:boolean,
   type: ModalType,
-  wordPrecharged?:WordInterface
+  wordPrecharged?:WordInterface,
+  translationSel?:number,
+  exampleSel?:number
 }
 
 
