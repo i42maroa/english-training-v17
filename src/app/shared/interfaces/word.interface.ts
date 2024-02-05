@@ -1,4 +1,4 @@
-export type WordType = 'adj' | 'noun' | 'adv' | 'verb' | 'phrasal';
+export type WordType = 'adj' | 'noun' | 'adv' | 'verb' | 'phVb' | 'exp';
 
 export interface WordExample{
   phrase:string;
@@ -42,4 +42,13 @@ export const WORDS_TEST:WordInterface[]=[
       }
     ]
   }
+]
+
+
+export const WORD_TYPE: {label:string; value:WordType}[] = [
+  { label: 'NOUN', value: 'noun' },
+  { label: 'VERB', value: 'verb' },
+  { label: 'ADJ', value: 'adj' },
+  { label: 'PHRASAL_VERB', value: 'phVb' },
+  { label: 'EXPRESION', value: 'exp' },
 ]

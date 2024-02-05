@@ -1,1 +1,9 @@
-<p>new works!</p>
+<form [formGroup]="form">
+  <select class="form_input" formControlName="typeWord">
+    @for (option of optionSelect; track $index) {
+      <option [value]="option.value">{{option.label}}</option>
+    }
+</select>
+<input formControlName="translation" type="text" placeholder="Tradución">
+  <input formControlName="explanation" type="text" placeholder="Explicación">
+</form>

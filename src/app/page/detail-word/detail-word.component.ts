@@ -3,11 +3,13 @@ import { WORDS_TEST, WordInterface } from '../../shared/interfaces/word.interfac
 import { Store } from '@ngrx/store';
 import { listWords } from '../../state/selectors/words.selector';
 import { ActivatedRoute } from '@angular/router';
+import { AddTranslationButtonComponent } from '../../shared/components/add-translation-button/add-translation-button.component';
+import { AddExampleButtonComponent } from '../../shared/components/add-example-button/add-example-button.component';
 
 @Component({
   selector: 'app-detail-word',
   standalone: true,
-  imports: [],
+  imports: [AddTranslationButtonComponent, AddExampleButtonComponent],
   templateUrl: './detail-word.component.html',
   styleUrl: './detail-word.component.css'
 })

@@ -8,6 +8,9 @@ export const initialState:InterfaceState = PREDIFINED_INTERFACE_STATE;
 
 export const interfaceReducer = createReducer(
   initialState,
+  on(actions.closeModal, (state) => {
+    return {...state, modal:{...state.modal, show:false}}
+  }),
   //WORD MODAL
   on(actions.modalNewWord, (state:InterfaceState) => {
     return {...state, modal:{show:true, type:'new-word' as const}}
@@ -19,8 +22,8 @@ export const interfaceReducer = createReducer(
     return {...state, modal:{show:true, type:'delete-word' as const, wordPrecharged}}
   }),
   //TRANSLATION MODAL
-  on(actions.modalNewTranslation, (state:InterfaceState, {wordPrecharged}) => {
-    return {...state, modal:{show:true, type:'new-translation' as const, wordPrecharged}}
+  on(actions.modalNewTranslation, (state:InterfaceState, ) => {
+    return {...state, modal:{show:true, type:'new-translation' as const}}
   }),
   on(actions.modalModifyTranslation, (state:InterfaceState, {wordPrecharged, translationSel}) => {
     return {...state, modal:{show:true, type:'modify-translation' as const, wordPrecharged, translationSel}}
@@ -29,8 +32,8 @@ export const interfaceReducer = createReducer(
     return {...state, modal:{show:true, type:'delete-translation' as const, wordPrecharged, translationSel}}
   }),
   //EXAMPLE MODAL
-  on(actions.modalNewExample, (state:InterfaceState, {wordPrecharged, translationSel}) => {
-    return {...state, modal:{show:true, type:'new-example' as const, wordPrecharged, translationSel}}
+  on(actions.modalNewExample, (state:InterfaceState, {translationSel}) => {
+    return {...state, modal:{show:true, type:'new-example' as const, translationSel}}
   }),
   on(actions.modalModifyExample, (state:InterfaceState, {wordPrecharged, translationSel, exampleSel}) => {
     return {...state, modal:{show:true, type:'modify-example' as const, wordPrecharged, translationSel, exampleSel}}

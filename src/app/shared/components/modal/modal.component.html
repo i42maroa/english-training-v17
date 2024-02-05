@@ -1,5 +1,6 @@
 @if (showModal$ | async) {
   <div class="container">
+    <button (click)="closeModal()">X</button>
      @switch (typeModal$ | async) {
         @case ('new-word') {<app-word-m-new/>}
         @case ('new-translation') {<app-translation-m-new/>}

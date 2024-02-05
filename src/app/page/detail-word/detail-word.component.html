@@ -19,8 +19,13 @@
               <p>{{example.explanation}}</p>
             }
           }
+          <app-add-example-button [translationSel]="$index"/>
         </div>
-        }
+      }@else {
+        <app-add-example-button [translationSel]="0"/>
+      }
     }
   </div>
+
+  <app-add-translation-button/>
 </div>

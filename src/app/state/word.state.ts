@@ -3,7 +3,7 @@ import { WORDS_TEST, WordInterface } from "../shared/interfaces/word.interface"
 export interface WordState{
   words:ReadonlyArray<WordInterface>,
   loading:boolean,
-  selectWordId?:string
+  selectWord?:WordInterface
 }
 
 export const PREDIFINED_WORD_STATE:WordState = {
