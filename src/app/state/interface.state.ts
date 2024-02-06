@@ -21,7 +21,7 @@ export type TranslationOperation = 'new-translation' | 'modify-translation' | 'd
 export type ExamplesOperation = 'new-example' | 'modify-example' | 'delete-example';
 
 export const PREDIFINED_INTERFACE_STATE:InterfaceState = {
-  showAddButton:false,
+  showAddButton:true,
   modal:{
     show:false,
     type: 'new-word'

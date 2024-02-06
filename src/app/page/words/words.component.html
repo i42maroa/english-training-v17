@@ -1,7 +1,17 @@
-<p>List words</p>
+<div class="container">
+  <h2>List words</h2>
 
-@for (word of words$ | async; track word._id) {
-  <p [routerLink]="'/detail/'+ word._id">{{word.name}}</p>
-}
+  @for (word of words$ | async; track word._id) {
+    <div [routerLink]="'/detail/'+ word._id">
+      <span>
+        {{word.name}}
+      </span>
+    </div>
+  }
 
-<app-add-button></app-add-button>
+  @if (showAddButton$ | async) {
+    <app-add-button class="float_button"/>
+  }
+</div>
+
+

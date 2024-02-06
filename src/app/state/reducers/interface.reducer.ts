@@ -9,36 +9,36 @@ export const initialState:InterfaceState = PREDIFINED_INTERFACE_STATE;
 export const interfaceReducer = createReducer(
   initialState,
   on(actions.closeModal, (state) => {
-    return {...state, modal:{...state.modal, show:false}}
+    return {...state, showAddButton:true, modal:{...state.modal, show:false}}
   }),
   //WORD MODAL
   on(actions.modalNewWord, (state:InterfaceState) => {
-    return {...state, modal:{show:true, type:'new-word' as const}}
+    return {...state, showAddButton:false, modal:{show:true, type:'new-word' as const}}
   }),
   on(actions.modalModifyWord, (state:InterfaceState, {wordPrecharged}) => {
-    return {...state, modal:{show:true, type:'modify-word' as const, wordPrecharged}}
+    return {...state, showAddButton:false, modal:{show:true, type:'modify-word' as const, wordPrecharged}}
   }),
   on(actions.modalDeleteWord, (state:InterfaceState, {wordPrecharged}) => {
-    return {...state, modal:{show:true, type:'delete-word' as const, wordPrecharged}}
+    return {...state, showAddButton:false, modal:{show:true, type:'delete-word' as const, wordPrecharged}}
   }),
   //TRANSLATION MODAL
   on(actions.modalNewTranslation, (state:InterfaceState, ) => {
-    return {...state, modal:{show:true, type:'new-translation' as const}}
+    return {...state, showAddButton:false, modal:{show:true, type:'new-translation' as const}}
   }),
   on(actions.modalModifyTranslation, (state:InterfaceState, {wordPrecharged, translationSel}) => {
-    return {...state, modal:{show:true, type:'modify-translation' as const, wordPrecharged, translationSel}}
+    return {...state, showAddButton:false, modal:{show:true, type:'modify-translation' as const, wordPrecharged, translationSel}}
   }),
   on(actions.modalDeleteTranslation, (state:InterfaceState, {wordPrecharged, translationSel}) => {
-    return {...state, modal:{show:true, type:'delete-translation' as const, wordPrecharged, translationSel}}
+    return {...state, showAddButton:false, modal:{show:true, type:'delete-translation' as const, wordPrecharged, translationSel}}
   }),
   //EXAMPLE MODAL
   on(actions.modalNewExample, (state:InterfaceState, {translationSel}) => {
-    return {...state, modal:{show:true, type:'new-example' as const, translationSel}}
+    return {...state, showAddButton:false, modal:{show:true, type:'new-example' as const, translationSel}}
   }),
   on(actions.modalModifyExample, (state:InterfaceState, {wordPrecharged, translationSel, exampleSel}) => {
-    return {...state, modal:{show:true, type:'modify-example' as const, wordPrecharged, translationSel, exampleSel}}
+    return {...state, showAddButton:false, modal:{show:true, type:'modify-example' as const, wordPrecharged, translationSel, exampleSel}}
   }),
   on(actions.modalDeleteExample, (state:InterfaceState, {wordPrecharged, translationSel, exampleSel}) => {
-    return {...state, modal:{show:true, type:'delete-example' as const, wordPrecharged, translationSel, exampleSel}}
+    return {...state, showAddButton:false, modal:{show:true, type:'delete-example' as const, wordPrecharged, translationSel, exampleSel}}
   })
 )

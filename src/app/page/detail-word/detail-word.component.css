@@ -1,0 +1,64 @@
+.container{
+  margin: 2rem 1rem;
+}
+
+.title_word_container{
+  display: flex;
+  flex-direction: column;
+}
+
+.title_word_container h2{
+  margin: auto 1rem;
+}
+
+.sound{
+  font-style: italic;
+  margin: auto 1rem;
+  font-size: 12px;
+}
+
+.definition_container{
+  margin: 2rem 0.5rem;
+  outline: 2px solid var(--grey);
+
+
+}
+
+.title_definition{
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.definition, .type{
+  margin: 0.5rem 1rem;
+}
+
+.explanation{
+  margin-left: 1rem;
+}
+.example_container{
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.example{
+  background-color: var(--grey);
+}
+
+.phrase{
+  margin-left: 0.5rem;
+}
+
+.button_add_example{
+  margin: 0.5rem auto;
+}
+
+.float_button{
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+}

@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { modalNewWord } from '../../../state/actions/interface.actions';
+import { modalNewWord } from '../../../../state/actions/interface.actions';
 
 @Component({
   selector: 'app-add-button',
   standalone: true,
   imports: [],
-  templateUrl: './add-button.component.html',
-  styleUrl: './add-button.component.css'
+  templateUrl: './add-word-button.component.html',
+  styleUrl: './add-word-button.component.css'
 })
-export class AddButtonComponent {
+export class AddWordButtonComponent {
 
   constructor(private readonly store:Store){ }
 

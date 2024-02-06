@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { modalNewExample } from '../../../state/actions/interface.actions';
+import { modalNewExample } from '../../../../state/actions/interface.actions';
 
 @Component({
   selector: 'app-add-example-button',

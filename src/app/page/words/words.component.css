@@ -1,0 +1,10 @@
+.container{
+  margin: 2rem 1rem;
+}
+
+
+.float_button{
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+}

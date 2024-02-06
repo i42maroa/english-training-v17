@@ -1,31 +1,40 @@
 
-<div>
-  <h2>{{word.name }}</h2>
-  <p>/{{word.pronuntation}}/</p>
+<div class="container">
+  <div class="title_word_container">
+    <h2>{{word.name }}</h2>
+    <span class="sound"> /{{word.pronuntation}}/</span>
+  </div>
 
   <div class="definition_container">
     @for (definition of word.definition; track $index) {
-        <p>{{definition.type}}</p>
-        <p>{{definition.translation}}</p>
+
+      <div class="title_definition">
+        <span class="definition">{{definition.translation}}</span>
+        <span class="type">{{definition.type}}</span>
+      </div>
+
         @if (definition.explanation) {
-          <p>{{definition.explanation}}</p>
+          <p class="explanation">{{definition.explanation}}</p>
         }
         @if (definition.examples.length > 0) {
-        <div>
-          <p>Examples</p>
+        <div class="example_container">
           @for (example of definition.examples; track $index) {
-            <p>{{example.phrase}}</p>
-            @if (example.explanation) {
-              <p>{{example.explanation}}</p>
-            }
+            <div class="example">
+              <p class="phrase">{{example.phrase}}</p>
+              @if (example.explanation) {
+                <p class="explanation">{{example.explanation}}</p>
+              }
+            </div>
           }
-          <app-add-example-button [translationSel]="$index"/>
+          <app-add-example-button class="button_add_example" [translationSel]="$index"/>
         </div>
       }@else {
-        <app-add-example-button [translationSel]="0"/>
+        <app-add-example-button class="button_add_example" [translationSel]="0"/>
       }
     }
   </div>
 
-  <app-add-translation-button/>
+  @if (showAddButton$ | async) {
+    <app-add-translation-button class="float_button"/>
+  }
 </div>

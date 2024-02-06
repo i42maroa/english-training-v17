@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { modalNewTranslation } from '../../../state/actions/interface.actions';
+import { modalNewTranslation } from '../../../../state/actions/interface.actions';
 
 @Component({
   selector: 'app-add-translation-button',

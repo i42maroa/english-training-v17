@@ -3,7 +3,7 @@ import { InterfaceState } from "../interface.state";
 
 export const selectWordsFeature = createFeatureSelector<InterfaceState>(`interface`);
 
-export const selectAddButton = createSelector(
+export const selectShowAddButton = createSelector(
   selectWordsFeature,
   (state:InterfaceState) => state.showAddButton
 )
