@@ -93,6 +93,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "english-training-v17:build:production",
+              "serveTarget": "english-training-v17:serve:production"
+            },
+            "development": {
+              "buildTarget": "english-training-v17:build:development",
+              "serveTarget": "english-training-v17:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

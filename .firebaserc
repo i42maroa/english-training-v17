@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "english-training-v17": {
+      "hosting": {
+        "english-training-v17": [
+          "english-training-v17"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "english-training-v17"
+  }
+}

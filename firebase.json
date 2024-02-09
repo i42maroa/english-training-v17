@@ -1,1 +1,11 @@
-{}
+{
+  "hosting": [
+    {
+      "target": "english-training-v17",
+      "source": ".",
+      "frameworksBackend": {
+        "region": "europe-west1"
+      }
+    }
+  ]
+}
